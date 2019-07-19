@@ -26,7 +26,7 @@ class _DesktopbodyState extends State<Desktopbody> {
   Widget body;
   @override
   void initState() {
-    body = Aboutmobile();
+    body = About();
     super.initState();
   }
   @override
@@ -34,7 +34,7 @@ class _DesktopbodyState extends State<Desktopbody> {
     return Scaffold(
       body: Row (children: <Widget>[
         Expanded(
-          flex: 6,
+          flex: 5,
         child: body,
     ),
     Expanded(
@@ -71,9 +71,10 @@ class Contact extends StatelessWidget {
     return Container(
      color: Colors.lightBlue,
      child: Column(
-       mainAxisAlignment: MainAxisAlignment.center,
+       mainAxisAlignment: MainAxisAlignment.start,
  children: <Widget>[
-   Text("Contacts")
+   Text ("Контакты", style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.w800),),
+   Text("*Скоро*"),
  ],
        
      ),
@@ -91,9 +92,10 @@ class Works extends StatelessWidget {
     return Container(
      color: Colors.lightBlue,
      child: Column(
-       mainAxisAlignment: MainAxisAlignment.center,
+       mainAxisAlignment: MainAxisAlignment.start,
 children: <Widget>[
-  Text ("Works"),
+ Text ("Работы", style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.w800),),
+  Text("*Скоро*")
 ],
      ), );
 }
@@ -119,10 +121,10 @@ class About extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 150.0),
         child: CircleAvatar(
             radius:125,
-          backgroundImage: NetworkImage ("http://dlyakota.ru/uploads/posts/2017-11/dlyakota.ru_fotoprikoly-s-kotami_nedovolnye-koty-17-foto_1.jpeg")
+          backgroundImage: NetworkImage ("https://pp.userapi.com/c856120/v856120012/986ee/bZK5ekEOLp0.jpg")
         ),
       ),
-      Text("Приветствую на моем сайте. Меня зовут Иван Бобко.", style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),),
+      Text("Приветствую на моем сайте. Меня зовут Иван Бобко. Со мной можно связаться по почте Funny.man123@yandex.ru", style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),),
      ],
      ),
       );
@@ -184,12 +186,18 @@ class Worksmob extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
      color: Colors.lightBlue,
-     child: Row(
-       mainAxisAlignment: MainAxisAlignment.center,
+      child: Row (mainAxisAlignment: MainAxisAlignment.center,
+       children: <Widget>[ Column (
+       crossAxisAlignment: CrossAxisAlignment.center,
 children: <Widget>[
-  Text ("Works"),
-],
-     ), );
+  Text ("Работы", style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.w800),),
+Text ("*СКОРО*", style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w800),),
+],     
+     ), 
+     ],
+     )
+    
+     );
 }
 }
 class Contactmob extends StatelessWidget {
@@ -200,12 +208,18 @@ class Contactmob extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
      color: Colors.lightBlue,
-     child: Row(
-       mainAxisAlignment: MainAxisAlignment.center,
+     child: Row (mainAxisAlignment: MainAxisAlignment.center,
+       children: <Widget>[ Column (
+       crossAxisAlignment: CrossAxisAlignment.center,
 children: <Widget>[
-  Text ("Contacts"),
-],
-     ), );
+  Text ("Контакты", style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.w800),),
+Text ("*СКОРО*", style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w800),),
+],     
+     ), 
+     ],
+     )
+    
+     );
 }
 }
 
@@ -228,10 +242,10 @@ class Aboutmobile extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 80.0),
         child: CircleAvatar(
             radius:125,
-          backgroundImage: NetworkImage ("http://dlyakota.ru/uploads/posts/2017-11/dlyakota.ru_fotoprikoly-s-kotami_nedovolnye-koty-17-foto_1.jpeg")
+          backgroundImage: NetworkImage ("https://pp.userapi.com/c856120/v856120012/986ee/bZK5ekEOLp0.jpg")
         ),
       ),
-      Text("Приветствую на моем сайте. Меня зовут Иван Бобко.", style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),),
+      Text("Приветствую на моем сайте. Меня зовут Иван Бобко.  Со мной можно связаться по почте Funny.man123@yandex.ru", style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),),
      ],
      ),
       );
